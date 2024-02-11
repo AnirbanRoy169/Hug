@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.background img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.curtain {
+    height: 100vh;
+    width: 50%;
+    float: left;
+    position: relative;
+    background: url("curtain.png");
+    z-index: +1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#left {
+    animation: left 10s ease-in-out 26s forwards;
+}
+
+@keyframes left {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#right {
+    animation: right 10s ease-in-out 26s forwards;
+}
+
+@keyframes right {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.text {
+    position: absolute;
+    z-index: +2;
+    animation: text 1s ease-in-out 26s forwards;
+}
+
+@keyframes text {
+    100% {
+        opacity: 0;
+    }
+}
+
+.wish {
+    position: absolute;
+    z-index: +2;
+    opacity: 0;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #14dde8;
+    text-shadow: 2px 2px 4px #000000;
+    animation: wish 1s ease-in-out 36s forwards;
+}
+
+#color {
+    color: #f1e7e2;
+}
+
+@keyframes wish {
+    100% {
+        opacity: 1;
+    }
+}
